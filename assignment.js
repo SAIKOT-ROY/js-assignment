@@ -24,9 +24,20 @@ const finalresult = mindGame(33);
 // show it as a output
 
 // Problem number 2 evenOdd  
-
-
-
+function evenOdd(str){
+    const stringSize = str.length;
+     if(stringSize % 2 == 0){
+        return 'even'
+     }
+     else{
+        return 'odd'
+     }    
+} 
+const stringName = 'misa'; 
+const string = evenOdd(stringName);  
+// console.log(string);
+// Funtction number 2 finds out if the functions has odd 
+// number of letter or even number of letter 
 
 // Problem number 3 Is lg seven 
 
@@ -40,12 +51,12 @@ function isLGSeven(aInputnum){
         const multiplieds = aNum*2;
         return multiplieds;
     }       
-
 }
 const inputResult = isLGSeven(14);
 // console.log(inputResult);
 
-// Problem Number 3 done here 
+// Function number 3 finds < 7 number and show output as they are but multiply number that is > 7
+// into 2
 
 // Problem Number 4 finding bad data 
  
@@ -65,6 +76,8 @@ const badData = [-14, 3, 12, -7, -8, 16, 26];
 const badDatainputer = findingBadData(badData);
 // console.log(badDatainputer);
 
+// Function number 4 finds out the negative number or bad data and put them into an array 
+
 // Problem 5 Gems to diamond convertor
 
 function gemsToDiamond(firstFriend, seconedFriend, thirdFriend){
@@ -74,7 +87,7 @@ function gemsToDiamond(firstFriend, seconedFriend, thirdFriend){
     const thirdFriendDiamonds = thirdFriend * 43;
 
     const forTotalDiamonds = firstFriendDiamonds + seconedFriendDiamonds + thirdFriendDiamonds;
-    if(forTotalDiamonds > 2000){
+    if(forTotalDiamonds > 1000*2){
         const dividedDiamond = forTotalDiamonds -2000;
         return dividedDiamond;
     }
@@ -84,4 +97,7 @@ function gemsToDiamond(firstFriend, seconedFriend, thirdFriend){
     }
 }
 const friendsDiamond = gemsToDiamond(1, 2, 3);
-console.log(friendsDiamond);
+// console.log(friendsDiamond);
+
+// In upwards the function converts gems to diamonds so the each friend can have 
+// their share of equal diamonds
