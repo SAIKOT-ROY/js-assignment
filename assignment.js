@@ -1,6 +1,10 @@
 // Problem number 1 mindgame
 
 function mindGame(number){
+ if(typeof number !== 'number'){
+    return 'Please enter a number'
+ }
+ else{
     const numberMultipiction = 3;
     const totalMultipiction = number*numberMultipiction;
     
@@ -14,8 +18,9 @@ function mindGame(number){
     const totalMinus = totalDivided-numberMinus;
 
     return totalMinus;
+ }
 }
-const finalresult = mindGame(33);
+// const finalresult = mindGame(45);
 // console.log(finalresult);
 
 // Upwards function works if you call this function with any number 
@@ -25,24 +30,34 @@ const finalresult = mindGame(33);
 
 // Problem number 2 evenOdd  
 function evenOdd(str){
-    const stringSize = str.length;
+    if(typeof str !== 'string'){
+        return 'Please enter a string'
+    } 
+    else{
+        const stringSize = str.length;
      if(stringSize % 2 == 0){
         return 'even'
      }
      else{
         return 'odd'
-     }    
+     }   
+    }
 } 
-const stringName = 'misa'; 
-const string = evenOdd(stringName);  
+// const stringName = 'nidhi'; 
+// const string = evenOdd(stringName);  
 // console.log(string);
+
 // Funtction number 2 finds out if the functions has odd 
 // number of letter or even number of letter 
 
 // Problem number 3 Is lg seven 
 
 function isLGSeven(aInputnum){
-    const aNum = aInputnum - 7;
+    if(typeof aInputnum !== 'number'){
+        return 'Please enter a number'
+    }
+    else{
+        const aNum = aInputnum - 7;
     
     if(aNum < 7){
         return aNum;
@@ -50,9 +65,10 @@ function isLGSeven(aInputnum){
     else{
         const multiplieds = aNum*2;
         return multiplieds;
+    }
     }       
 }
-const inputResult = isLGSeven(14);
+// const inputResult = isLGSeven(30);
 // console.log(inputResult);
 
 // Function number 3 finds < 7 number and show output as they are but multiply number that is > 7
@@ -61,19 +77,26 @@ const inputResult = isLGSeven(14);
 // Problem Number 4 finding bad data 
  
 function findingBadData(positiveAge){
-    let badDataContainer = [];
+   if(typeof positiveAge !== 'object'){
+    
+    return 'Please enter a object'
+
+   }
+   else{
+    let badDataContainer = 0
 
     for(let i = 0; i < positiveAge.length; i++){
         const element = positiveAge[i];
 
         if(element < 0){
-            badDataContainer.push(element)
+           badDataContainer += 1;
         }
     }
-    return badDataContainer.length;
+    return badDataContainer;
+   }
 }
-const badData = [-14, 3, 12, -7, -8, 16, 26];
-const badDatainputer = findingBadData(badData);
+// const badData = [-14, 3, 12, -7, -8, 16, -26];
+// const badDatainputer = findingBadData(badData);
 // console.log(badDatainputer);
 
 // Function number 4 finds out the negative number or bad data and put them into an array 
@@ -81,22 +104,30 @@ const badDatainputer = findingBadData(badData);
 // Problem 5 Gems to diamond convertor
 
 function gemsToDiamond(firstFriend, seconedFriend, thirdFriend){
+     
+    if(typeof firstFriend !== 'number' || typeof seconedFriend !== 'number' || typeof thirdFriend !== 'number'){
 
-    const firstFriendDiamonds = firstFriend * 21;
-    const seconedFriendDiamonds = seconedFriend * 32;
-    const thirdFriendDiamonds = thirdFriend * 43;
-
-    const forTotalDiamonds = firstFriendDiamonds + seconedFriendDiamonds + thirdFriendDiamonds;
-    if(forTotalDiamonds > 1000*2){
-        const dividedDiamond = forTotalDiamonds -2000;
-        return dividedDiamond;
+        return 'enter a number'
+        
     }
     else{
-        const dividedDiamonds = forTotalDiamonds;
-        return dividedDiamonds
+        const firstFriendDiamonds = firstFriend * 21;
+        const seconedFriendDiamonds = seconedFriend * 32;
+        const thirdFriendDiamonds = thirdFriend * 43;
+    
+        const forTotalDiamonds = firstFriendDiamonds + seconedFriendDiamonds + thirdFriendDiamonds;
+        if(forTotalDiamonds > 1000*2){
+            const dividedDiamond = forTotalDiamonds -2000;
+            return dividedDiamond;
+        }
+        else{
+            const dividedDiamonds = forTotalDiamonds;
+            return dividedDiamonds
+        }
     }
+
 }
-const friendsDiamond = gemsToDiamond(1, 2, 3);
+// const friendsDiamond = gemsToDiamond(100, 200, 300);
 // console.log(friendsDiamond);
 
 // In upwards the function converts gems to diamonds so the each friend can have 
