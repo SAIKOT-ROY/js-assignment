@@ -63,4 +63,25 @@ function findingBadData(positiveAge){
 }
 const badData = [-14, 3, 12, -7, -8, 16, 26];
 const badDatainputer = findingBadData(badData);
-console.log(badDatainputer);
+// console.log(badDatainputer);
+
+// Problem 5 Gems to diamond convertor
+
+function gemsToDiamond(firstFriend, seconedFriend, thirdFriend){
+
+    const firstFriendDiamonds = firstFriend * 21;
+    const seconedFriendDiamonds = seconedFriend * 32;
+    const thirdFriendDiamonds = thirdFriend * 43;
+
+    const forTotalDiamonds = firstFriendDiamonds + seconedFriendDiamonds + thirdFriendDiamonds;
+    if(forTotalDiamonds > 2000){
+        const dividedDiamond = forTotalDiamonds -2000;
+        return dividedDiamond;
+    }
+    else{
+        const dividedDiamonds = forTotalDiamonds;
+        return dividedDiamonds
+    }
+}
+const friendsDiamond = gemsToDiamond(1, 2, 3);
+console.log(friendsDiamond);
