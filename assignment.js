@@ -25,7 +25,42 @@ const finalresult = mindGame(33);
 
 // Problem number 2 evenOdd  
 
-function evenOdd(){
-    
-}
 
+
+
+// Problem number 3 Is lg seven 
+
+function isLGSeven(aInputnum){
+    const aNum = aInputnum - 7;
+    
+    if(aNum < 7){
+        return aNum;
+    }
+    else{
+        const multiplieds = aNum*2;
+        return multiplieds;
+    }       
+
+}
+const inputResult = isLGSeven(14);
+// console.log(inputResult);
+
+// Problem Number 3 done here 
+
+// Problem Number 4 finding bad data 
+ 
+function findingBadData(positiveAge){
+    let badDataContainer = [];
+
+    for(let i = 0; i < positiveAge.length; i++){
+        const element = positiveAge[i];
+
+        if(element < 0){
+            badDataContainer.push(element)
+        }
+    }
+    return badDataContainer.length;
+}
+const badData = [-14, 3, 12, -7, -8, 16, 26];
+const badDatainputer = findingBadData(badData);
+console.log(badDatainputer);
